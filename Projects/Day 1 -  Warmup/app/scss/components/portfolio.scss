@@ -1,0 +1,53 @@
+@use '../util/' as *;
+
+.portfolio {
+  @include flex();
+  height: rem(485);
+
+  .portfolio__element {
+    flex-basis: 100%;
+    color: #ffffff;
+
+    &:nth-child(1) {
+      background: url("../app/assets/portfolio_1.png") center/cover no-repeat;
+    }
+
+    &:nth-child(2) {
+      @include flex(center, center);
+      background: url("../app/assets/portfolio_2.png") center/cover no-repeat;
+      position: relative;
+
+      .portfolio__element__content {
+        @include flex(center, center, column);
+        position: absolute;
+        z-index: 10;
+        padding: 0 rem(120);
+
+        .portfolio__element__title {
+          font-size: rem(30);
+          font-weight: bold;
+          padding-bottom: rem(15);
+        }
+
+        .portfolio__element__description {
+          line-height: 1.5;
+          text-align: center;
+          padding-bottom: rem(70);
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    &:nth-child(3) {
+      background: url("../app/assets/portfolio_3.png") center/cover no-repeat;
+    }
+  }
+}

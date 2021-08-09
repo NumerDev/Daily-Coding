@@ -1,0 +1,14 @@
+@use '../util/' as *;
+
+.map {
+  background: url("../app/assets/map.png") center/cover no-repeat;
+  height: rem(600);
+  position: relative;
+
+  .pin {
+    position: absolute;
+
+    top: 45%;
+    left: 50%;
+  }
+}

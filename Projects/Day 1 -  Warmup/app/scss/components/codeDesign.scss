@@ -1,0 +1,43 @@
+@use '../util/' as *;
+
+.code__design {
+  @include flex();
+  height: rem(520);
+  color: #ffffff;
+
+  .code,
+  .design {
+    @include flex(center, stretch, column);
+    flex-basis: 100%;
+    line-height: 1.8;
+
+    .title {
+      font-size: rem(48);
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+
+    .description {
+      font-size: rem(18);
+      margin-bottom: rem(45);
+    }
+  }
+
+  .design {
+    background: url("../app/assets/design.png") center/cover no-repeat;
+
+    .design__content {
+      padding: 0 rem(80) 0 rem(300);
+    }
+  }
+
+  .code {
+    background: url("../app/assets/code.png") center/cover no-repeat;
+
+    .code__content {
+      padding: 0 rem(300) 0 rem(80);
+    }
+  }
+}

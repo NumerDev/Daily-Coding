@@ -1,0 +1,51 @@
+@use '../util/' as *;
+
+.about {
+  @include flex(normal, center, column);
+  background: url("../app/assets/about_bg.png") center/cover no-repeat;
+  height: rem(900);
+  color: #ffffff;
+  padding: 0 rem(300);
+
+  .about__title {
+    @include flex(center, center, column);
+    font-size: rem(48);
+    font-weight: bold;
+    padding: rem(115) rem(300);
+
+    .about__subtitle {
+      margin-top: rem(40);
+      font-weight: 200;
+      font-size: rem(18);
+      color: #949494;
+      text-align: center;
+    }
+  }
+
+  .person__grid {
+    @include flex(space-evenly, center);
+    width: 100%;
+
+    .person {
+      @include flex(space-around, center, column);
+      width: rem(225);
+      height: rem(260);
+
+      .person__name {
+        font-family: $secondary-font;
+        font-weight: bold;
+        font-size: rem(24);
+      }
+
+      .person__description {
+        text-align: center;
+        color: #949494;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .gradient__button {
+    margin-top: rem(115);
+  }
+}

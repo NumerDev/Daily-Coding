@@ -1,0 +1,84 @@
+@use '../util/' as *;
+
+.hero {
+  @include flex(normal, center, column);
+  background: url("../app/assets/background.png") center/cover no-repeat;
+  height: 100vh;
+  padding: 0 rem(300);
+  position: relative;
+
+  .top__bar {
+    @include flex(space-between, center, row);
+    padding: rem(55) 0;
+    width: 100%;
+
+    .logo {
+      font-size: rem(36);
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+
+    .menu {
+      @include flex(space-around, center);
+
+      .menu__active {
+        border: 1px solid #606365;
+      }
+
+      a {
+        @include flex(center, center);
+        width: rem(100);
+        height: rem(40);
+        border-radius: rem(20);
+        font-size: rem(18);
+      }
+    }
+  }
+
+  .hero__text {
+    @include flex(center, center, column);
+
+    .hero__primary {
+      font-size: rem(48);
+      font-weight: bold;
+      line-height: 1.4;
+      margin-top: rem(100);
+    }
+
+    .hero__secondary {
+      font-size: rem(18);
+      color: #949494;
+      margin-bottom: rem(70);
+    }
+  }
+
+  .divider {
+    position: absolute;
+    bottom: rem(110);
+    font-size: rem(14);
+    color: #ffffff;
+
+    .scroll {
+      margin: 20px; //temp
+      height: rem(45);
+      width: rem(25);
+      background-color: #ffffff;
+      border-radius: rem(25);
+      position: relative;
+
+      &::before {
+        content: "";
+        height: rem(7);
+        width: rem(3);
+        border-radius: 50%;
+        background-color: #000000;
+        position: absolute;
+        top: rem(10);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

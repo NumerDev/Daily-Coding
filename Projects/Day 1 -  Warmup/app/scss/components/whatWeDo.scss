@@ -1,0 +1,53 @@
+@use '../util/' as *;
+
+.what__we__do {
+  @include flex(normal, center, column);
+  height: rem(850);
+  padding: 0 rem(300);
+
+  .title {
+    font-size: rem(48);
+    font-weight: bold;
+    padding: rem(100) 0 rem(115) 0;
+  }
+
+  .wwd__grid {
+    @include flex(center, center, column);
+
+    .wwd__grid__row {
+      @include flex(center, center);
+      padding-bottom: rem(90);
+    }
+
+    .wwd__element {
+      @include flex(center, center);
+
+      &:nth-child(2n) {
+        padding-left: rem(80);
+      }
+
+      &:nth-child(2n + 1) {
+        padding-right: rem(80);
+      }
+
+      .element__vector {
+        padding-right: rem(48);
+        background-size: cover;
+      }
+
+      .wwd__element__content {
+        .element__title {
+          font-size: rem(30);
+          font-weight: bold;
+          padding-bottom: rem(10);
+        }
+
+        .element__description {
+          font-size: rem(18);
+          color: #949494;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
