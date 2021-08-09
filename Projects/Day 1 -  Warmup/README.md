@@ -21,7 +21,7 @@ Today I did a ***little*** warm-up. I built a fairly simple landing page using b
 **What could have been done better?:**
 - Gulp setup because I forgot to add a task to copy all images etc to the `dist` folder and because of that I had to play with it manually
 - Class names... They weren't bad but I always have problems with them
-- The ability to worh with photoshop 😒 I've nothing against photoshop but... ***Figma is better***
+- The ability to work with photoshop 😒 I've nothing against photoshop but... ***Figma is better***
 
 
 **Wasted cups of coffee**: 1
