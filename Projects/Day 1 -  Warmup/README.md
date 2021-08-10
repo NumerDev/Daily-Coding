@@ -1,6 +1,6 @@
 <h1 align="center">Day 1 - warmup</h1>
   
-Today I did a ***little*** warm-up. I built a fairly simple landing page using baIt sic stack. The project was not very complicated and gave me an opportunity to try working on prepared designs. It was interesting I will admit. But I find it more pleasant to work on files from **Figma**.
+Today I did a ***little*** warm-up. I built a fairly simple landing page using basic stack. The project was not very complicated and gave me an opportunity to try working on prepared designs. It was interesting I admit. But I find it more pleasant to work on files from **Figma**.
 
 <hr>
 
