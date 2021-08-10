@@ -1,0 +1,27 @@
+@use '../util/' as *;
+
+.footer {
+  height: rem(750);
+  background: url("/app/assets/footer_vector.png") top/90% no-repeat;
+  padding: rem(80) rem(265) 0;
+  color: $faded-white;
+
+  .footer__nav {
+    @include flex(space-between, center);
+
+    .copyright {
+      @include flex(center, center);
+      gap: rem(20);
+      font-size: (18);
+      font-weight: 400;
+    }
+
+    .footer__menu {
+      @include flex(center, center);
+      gap: rem(65);
+      font-weight: bold;
+      font-size: rem(18);
+      color: rgba(135, 148, 158, 0.45);
+    }
+  }
+}

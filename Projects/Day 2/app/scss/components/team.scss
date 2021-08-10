@@ -1,0 +1,54 @@
+@use '../util/' as *;
+
+.team {
+  .team__header {
+    @include flex(center, center, column);
+    gap: rem(80);
+    font-size: rem(60);
+    font-weight: 200;
+    color: $header;
+    position: relative;
+    padding: rem(115) 0;
+
+    &::before {
+      margin-top: rem(40);
+      content: "";
+      position: absolute;
+      width: rem(30);
+      height: rem(1);
+      background-color: $lightgreen;
+    }
+
+    .team__header__secondary {
+      font-size: rem(18);
+      color: $faded-white;
+    }
+  }
+
+  .team__grid {
+    @include flex();
+    flex-wrap: wrap;
+    height: rem(800);
+
+    .grid__item {
+      @include flex(center, center);
+      flex: 1 1 20%;
+      color: transparent;
+      font-size: rem(36);
+      font-weight: 200;
+
+      &:nth-child(2n) {
+        background-color: $bg-light;
+      }
+
+      &:nth-child(2n + 1) {
+        background-color: $bg-dark;
+      }
+    }
+
+    .grid__item:hover {
+      background-color: $lightgreen;
+      color: white;
+    }
+  }
+}

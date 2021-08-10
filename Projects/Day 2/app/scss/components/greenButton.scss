@@ -1,0 +1,12 @@
+@use '../util/' as *;
+
+.green__button {
+  width: rem(180);
+  height: rem(40);
+  background-color: $lightgreen;
+  border-radius: rem(25);
+  color: white;
+  font-weight: bold;
+  font-size: rem(14);
+  font-family: $primary-font;
+}

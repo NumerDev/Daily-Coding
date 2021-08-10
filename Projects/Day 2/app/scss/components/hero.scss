@@ -1,0 +1,78 @@
+@use '../util/' as *;
+
+.hero {
+  background: url("../app/assets/hero_bg.png") center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  color: white;
+
+  &::before {
+    z-index: -3;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+  .hero__menu__wrapper {
+    @include flex(space-between, center);
+    padding: rem(55) rem(265) 0;
+
+    .hero__menu {
+      @include flex(center, center);
+      gap: rem(65);
+      font-weight: bold;
+      font-size: rem(14);
+    }
+  }
+
+  .hero__content {
+    @include flex(center, center, column);
+    margin-top: rem(350);
+    gap: rem(70);
+
+    .hero__text {
+      @include flex(center, center, column);
+      gap: rem(40);
+
+      .hero__primary {
+        font-size: rem(60);
+        font-weight: 200;
+
+        .bold {
+          font-weight: bold;
+        }
+      }
+
+      .hero__secondary {
+        font-size: rem(24);
+        font-weight: bold;
+      }
+    }
+
+    .hero__button {
+      color: white;
+      width: rem(180);
+      height: rem(40);
+      border: rem(2) solid white;
+      border-radius: rem(24);
+    }
+
+    .bullets {
+      @include flex(space-around, center);
+      gap: rem(13);
+
+      .active {
+        background-color: white;
+      }
+      .bullet {
+        width: rem(10);
+        height: rem(10);
+        border: rem(2) solid white;
+        border-radius: 50%;
+      }
+    }
+  }
+}

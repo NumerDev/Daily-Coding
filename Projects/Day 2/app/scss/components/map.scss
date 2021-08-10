@@ -1,0 +1,33 @@
+@use '../util/' as *;
+
+.map {
+  @include flex(normal, center);
+  height: rem(750);
+
+  .map__content,
+  .map__image {
+    width: 50%;
+  }
+
+  .map__image {
+    margin-left: rem(-10);
+  }
+
+  .map__content {
+    @include flex(center, stretch, column);
+    padding-left: rem(270);
+    padding-right: rem(50);
+    gap: rem(72);
+
+    .item__title {
+      font-size: rem(60);
+      color: $header;
+    }
+
+    .item__desc {
+      font-size: rem(18);
+      color: $faded-white;
+      line-height: 2;
+    }
+  }
+}

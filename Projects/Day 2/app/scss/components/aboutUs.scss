@@ -1,0 +1,70 @@
+@use '../util/' as *;
+
+.about {
+  @include flex(normal, center, column);
+  min-height: 100vh;
+  padding: rem(110) rem(290);
+
+  .about__header {
+    @include flex(center, center, column);
+    gap: rem(80);
+    font-size: rem(60);
+    font-weight: 200;
+    color: $header;
+    position: relative;
+
+    &::before {
+      margin-top: rem(40);
+      content: "";
+      position: absolute;
+      width: rem(30);
+      height: rem(1);
+      background-color: $lightgreen;
+    }
+
+    .about__header__secondary {
+      font-size: rem(18);
+      color: $faded-white;
+    }
+  }
+
+  .content__grid {
+    @include flex(space-around, center);
+
+    height: rem(420);
+    margin-top: rem(160);
+
+    .grid__item {
+      @include flex(center, center, column);
+      text-align: center;
+
+      .item__icon {
+        @include flex(center, center);
+        height: rem(180);
+        width: rem(180);
+        background-color: $bg-light;
+        border-radius: 50%;
+        margin-bottom: rem(85);
+      }
+      .active {
+        background-color: $lightgreen;
+      }
+
+      .item__name {
+        color: #000000;
+        font-size: rem(30);
+        margin-bottom: rem(55);
+      }
+
+      .item__desc {
+        color: $faded-white;
+        font-size: rem(18);
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .green__button {
+    margin-top: rem(110);
+  }
+}

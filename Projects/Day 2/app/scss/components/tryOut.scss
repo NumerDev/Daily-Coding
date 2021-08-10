@@ -1,0 +1,14 @@
+@use '../util/' as *;
+
+.tryOut {
+  @include flex(center, center, column);
+  background: url("/app/assets/try_bg.png") center/cover no-repeat;
+  height: rem(750);
+  color: #ffffff;
+  font-size: rem(60);
+  gap: rem(110);
+
+  .bold {
+    font-weight: bold;
+  }
+}

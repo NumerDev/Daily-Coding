@@ -1,0 +1,77 @@
+@use '../util/' as *;
+
+.services {
+  padding: rem(110) rem(230);
+  background: $bg-light;
+
+  .services__header {
+    @include flex(center, center, column);
+    gap: rem(80);
+    font-size: rem(60);
+    font-weight: 400;
+    color: $header;
+    position: relative;
+
+    &::before {
+      margin-top: rem(40);
+      content: "";
+      position: absolute;
+      width: rem(30);
+      height: rem(1);
+      background-color: $lightgreen;
+    }
+
+    .services__header__secondary {
+      font-size: rem(18);
+      color: $faded-white;
+    }
+  }
+
+  .services__grid {
+    @include flex(space-around, center);
+    flex-wrap: wrap;
+    height: rem(500);
+    margin-top: rem(170);
+
+    .grid__item {
+      @include flex();
+      width: 50%;
+      height: 50%;
+
+      &:nth-child(2n + 1) {
+        padding-right: rem(50);
+      }
+
+      .item__icon {
+        @include flex(flex-start, stretch, column);
+
+        .icon__container {
+          @include flex(center, center);
+          background-color: #ffffff;
+          border-radius: 50%;
+          width: rem(95);
+          height: rem(95);
+        }
+      }
+
+      .item__content {
+        @include flex(center, stretch, column);
+        gap: rem(30);
+        padding-left: rem(50);
+
+        .item__header {
+          font-size: rem(60);
+          font-weight: 200;
+          color: $header;
+        }
+
+        .item__desc {
+          font-size: rem(18);
+          font-weight: 300;
+          color: $faded-white;
+          line-height: 3;
+        }
+      }
+    }
+  }
+}

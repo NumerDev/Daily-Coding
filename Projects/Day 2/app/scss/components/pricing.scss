@@ -1,0 +1,80 @@
+@use '../util/' as *;
+
+.pricing {
+  background-color: #f9f9fac4;
+  padding-bottom: rem(110);
+
+  .pricing__header {
+    @include flex(center, center, column);
+    gap: rem(80);
+    font-size: rem(60);
+    font-weight: 200;
+    color: $header;
+    position: relative;
+    padding: rem(115) 0;
+
+    &::before {
+      margin-top: rem(40);
+      content: "";
+      position: absolute;
+      width: rem(30);
+      height: rem(1);
+      background-color: $lightgreen;
+    }
+
+    .pricing__header__secondary {
+      font-size: rem(18);
+      color: $faded-white;
+    }
+  }
+
+  .card__grid {
+    @include flex(center, center);
+    gap: rem(30);
+
+    .card {
+      background-color: #ffffff;
+      height: rem(585);
+      width: rem(350);
+      border-radius: rem(5);
+
+      .card__info {
+        @include flex(center, stretch, column);
+        height: rem(215);
+        color: $lightgreen;
+        font-size: rem(60);
+        font-weight: 200;
+        padding-left: rem(55);
+        gap: rem(15);
+        border-bottom: 1px solid $bg-dark;
+
+        .card__license {
+          color: $faded-white;
+          font-size: rem(18);
+        }
+      }
+
+      .card__desc {
+        @include flex(center, center);
+        padding: 0 rem(35);
+        height: rem(300);
+        line-height: 3;
+        font-size: rem(18);
+        color: $faded-white;
+      }
+
+      .card__button {
+        @include flex(space-between, center);
+        background-color: $lightgreen;
+        height: rem(75);
+        width: 100%;
+        padding: 0 rem(35);
+
+        color: #ffffff;
+        font-size: rem(18);
+        font-weight: bold;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}

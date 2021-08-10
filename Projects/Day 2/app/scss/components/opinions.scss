@@ -1,0 +1,44 @@
+@use '../util/' as *;
+
+.opinions {
+  @include flex(center, center, column);
+  background: url("/app/assets/opinion_bg.png") center/cover no-repeat;
+  height: rem(700);
+
+  .opinions__content {
+    @include flex(center, center, column);
+    gap: rem(45);
+    margin-bottom: rem(130);
+
+    .content__header {
+      font-size: rem(30);
+      font-weight: 300;
+      color: #ffffff;
+
+      .green {
+        color: $lightgreen;
+      }
+    }
+
+    .content__name {
+      font-size: rem(18);
+      color: rgba(255, 255, 255, 0.3);
+      font-weight: 600;
+    }
+  }
+
+  .bullets {
+    @include flex(space-around, center);
+    gap: rem(13);
+
+    .active {
+      background-color: white;
+    }
+    .bullet {
+      width: rem(10);
+      height: rem(10);
+      border: rem(2) solid white;
+      border-radius: 50%;
+    }
+  }
+}
