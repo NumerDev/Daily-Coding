@@ -1,0 +1,47 @@
+@use '../util/' as *;
+
+.news {
+  @include flex(normal, center, column);
+  background-color: $light;
+  padding-bottom: rem(105);
+  .news__header {
+    font-size: rem(30);
+    font-weight: bold;
+    padding: rem(85) 0;
+    color: $dark;
+  }
+
+  .news__grid {
+    @include flex(center, center);
+    gap: rem(30);
+
+    .grid__item {
+      @include flex(normal, center, column);
+      line-height: rem(30);
+      width: rem(370);
+      color: $dark;
+      text-align: center;
+
+      .item__img {
+        margin-bottom: rem(40);
+      }
+      .item__name {
+        font-size: rem(24);
+        font-weight: bold;
+        padding-bottom: rem(5);
+      }
+
+      .item__desc {
+        font-size: rem(15);
+        font-weight: 300;
+        padding: 0 rem(30);
+      }
+
+      .rounded__button {
+        margin-top: rem(40);
+        font-size: rem(15);
+        font-weight: 300;
+      }
+    }
+  }
+}

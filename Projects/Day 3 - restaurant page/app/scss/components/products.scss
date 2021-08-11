@@ -1,0 +1,56 @@
+@use '../util/' as *;
+
+.products {
+  padding: rem(70) rem(420);
+
+  .product {
+    @include flex();
+    height: rem(410);
+
+    &:nth-child(2) {
+      margin-top: rem(55);
+      flex-direction: row-reverse;
+
+      .product__content {
+        .rounded__button {
+          background-color: #4b4e73;
+        }
+      }
+    }
+
+    .product__content,
+    .product__img {
+      width: 50%;
+      height: 100%;
+    }
+
+    .product__img {
+      border: rem(1) solid #dbdbdb;
+      border-radius: rem(3);
+    }
+
+    .product__content {
+      @include flex(center, stretch, column);
+      margin-right: rem(65);
+      margin-left: rem(45);
+
+      .content__name {
+        font-size: rem(30);
+        font-weight: bold;
+        line-height: 3;
+      }
+
+      .content__desc {
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: rem(30);
+      }
+
+      .rounded__button {
+        background-color: $orange-dark;
+        color: #ffffff;
+        margin-top: rem(55);
+      }
+    }
+  }
+}

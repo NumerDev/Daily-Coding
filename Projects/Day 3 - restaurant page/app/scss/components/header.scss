@@ -1,0 +1,90 @@
+@use '../util/' as *;
+
+.header {
+  @include flex(normal, center, column);
+  background: url("/app/assets/hero_bg.png") center/cover no-repeat;
+  height: rem(1460);
+
+  .header__wrapper {
+    @include flex(space-between, center);
+    background-color: #ffffff;
+    height: rem(150);
+    width: 100%;
+    color: $dark;
+    padding: 0 rem(350);
+
+    .logo {
+      font-size: rem(36);
+      font-weight: bold;
+    }
+
+    .header__menu {
+      @include flex(center, center);
+      gap: rem(25);
+
+      .active {
+        background-color: $orange-dark;
+        color: #ffffff;
+      }
+
+      a {
+        padding: rem(10) rem(20);
+        border-radius: rem(25);
+        font-size: rem(18);
+      }
+    }
+  }
+
+  .header__content {
+    @include flex(normal, center, column);
+    text-shadow: rem(1) rem(1) black;
+    color: #ffffff;
+    margin-top: rem(350);
+
+    .header__primary {
+      font-weight: 300;
+      font-size: rem(72);
+    }
+    .header__secondary {
+      font-weight: bold;
+      font-size: rem(30);
+    }
+  }
+
+  .header__grid {
+    @include flex(center, center);
+    gap: rem(75);
+    color: #ffffff;
+    padding-top: rem(130);
+
+    .grid__item {
+      @include flex(normal, center, column);
+      text-align: center;
+      height: 100%;
+      width: rem(320);
+
+      .item__img {
+        border-radius: 50%;
+        border: rem(8) solid #ffffff;
+        margin-bottom: rem(30);
+      }
+
+      .item__name {
+        font-size: rem(30);
+        font-weight: bold;
+        margin-bottom: rem(30);
+      }
+
+      .item__desc {
+        font-size: rem(15);
+        font-weight: 300;
+        line-height: rem(30);
+      }
+    }
+  }
+
+  .rounded__button {
+    color: #612316;
+    margin-top: rem(80);
+  }
+}

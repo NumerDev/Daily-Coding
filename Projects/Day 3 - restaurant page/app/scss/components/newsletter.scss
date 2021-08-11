@@ -1,0 +1,58 @@
+@use '../util/' as *;
+
+.newsletter {
+  @include flex(center, center, column);
+  background: url("../app/assets/newsletter_bg.png") center/cover no-repeat;
+  height: rem(380);
+
+  .newsletter__content {
+    @include flex(center, center, column);
+    width: rem(540);
+    text-align: center;
+    color: #ffffff;
+
+    .content__title {
+      font-weight: bold;
+      font-size: rem(30);
+      line-height: 3;
+    }
+
+    .content__desc {
+      font-weight: 300;
+      font-size: (15);
+      line-height: 1.5;
+    }
+  }
+
+  .newsletter__send {
+    .newsletter__input {
+      position: relative;
+      margin-top: rem(45);
+
+      .newsletter__email {
+        border-radius: rem(25);
+        border: rem(2) solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.2);
+        width: rem(515);
+        height: rem(55);
+        padding-left: rem(35);
+
+        &::placeholder {
+          color: #f3f4f6;
+          font-size: rem(18);
+        }
+      }
+
+      .newsletter__sign {
+        position: absolute;
+        width: rem(210);
+        background-color: #ffffff;
+        height: rem(55);
+        border-radius: rem(25);
+        right: 0;
+        color: #612316;
+        font-size: rem(18);
+      }
+    }
+  }
+}

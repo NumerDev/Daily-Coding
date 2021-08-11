@@ -1,0 +1,10 @@
+@use '../util/' as *;
+
+.rounded__button {
+  @include flex(center, center);
+  width: rem(210);
+  height: rem(50);
+  background-color: #ffffff;
+  border-radius: rem(25);
+  font-size: rem(18);
+}
