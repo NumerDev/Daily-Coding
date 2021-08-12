@@ -1,0 +1,73 @@
+@use '../util/' as *;
+
+.clients {
+  height: rem(500);
+  padding: rem(50) rem(210);
+
+  .clients__header {
+    @include flex(normal, center);
+
+    .title {
+      font-weight: 600;
+    }
+
+    .idk__divider {
+      height: rem(10);
+      flex: 1;
+      border-top: rem(2) solid #e4e4e4;
+      border-bottom: rem(1) solid #e4e4e4;
+      margin-left: rem(20);
+    }
+  }
+
+  .clients__grid {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    gap: rem(15);
+    margin-top: rem(20);
+
+    .grid__client {
+      background: url("/app/assets/clients_sample.png") center/cover no-repeat;
+      height: rem(170);
+      width: rem(170);
+      position: relative;
+
+      &::before {
+        @include flex(center, center);
+        content: "Sample";
+        position: absolute;
+        bottom: 105%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(100);
+        height: rem(30);
+        background-color: #333333;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: rem(14);
+        border-radius: rem(5);
+        opacity: 0;
+      }
+
+      &::after {
+        content: "";
+        border: rem(10) solid;
+        border-color: #333333 transparent transparent transparent;
+        position: absolute;
+        top: rem(-10);
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+
+      &:hover {
+        border: 3px solid #dddddd;
+
+        &::before,
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

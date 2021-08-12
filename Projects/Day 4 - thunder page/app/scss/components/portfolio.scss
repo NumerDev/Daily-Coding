@@ -1,0 +1,64 @@
+@use '../util/' as *;
+
+.portfolio {
+  height: rem(650);
+  background: url("/app/assets/portfolio_bg.png") center/cover no-repeat;
+  padding: rem(70) rem(210);
+  color: #ffffff;
+
+  .portfolio__header {
+    @include flex(space-between, center);
+    color: #ffffff;
+
+    .title {
+      font-size: rem(30);
+    }
+
+    .browse {
+      color: #ffffff;
+      width: rem(120);
+      height: rem(45);
+      border: rem(3) solid #9c9c9b;
+      border-radius: rem(2);
+    }
+  }
+
+  .portfolio__grid {
+    @include flex();
+    flex-wrap: wrap;
+    padding-top: rem(50);
+    gap: rem(20);
+
+    .grid__item {
+      width: rem(230);
+      height: rem(200);
+      position: relative;
+      background: url("/app/assets/portfolio_sample.png") center/cover no-repeat;
+
+      .hover__content {
+        @include flex(center, center, column);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .title {
+          padding-bottom: rem(20);
+        }
+
+        button {
+          background-color: #88d082;
+          width: rem(30);
+          height: rem(30);
+          border-radius: rem(3);
+        }
+      }
+    }
+  }
+}

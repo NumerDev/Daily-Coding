@@ -1,0 +1,38 @@
+@use '../util/' as *;
+
+.products {
+  @include flex(normal, center, column);
+  background: #f1f1f1;
+  padding: rem(50) rem(210);
+
+  .products__header {
+    background-color: #000000;
+    font-weight: 600;
+    display: inline-block;
+    padding: rem(3);
+    color: #ffffff;
+  }
+
+  .product__grid {
+    @include flex(center, center);
+    margin: rem(30) 0;
+    gap: rem(20);
+
+    .grid__item {
+      @include flex(space-around, center, column);
+      width: rem(320);
+      height: rem(400);
+      background-color: #ffffff;
+      padding: rem(15);
+      font-weight: 600;
+
+      &:hover {
+        box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.5);
+      }
+
+      .item__price {
+        color: #659f5c;
+      }
+    }
+  }
+}

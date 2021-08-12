@@ -1,0 +1,46 @@
+@use '../util/' as *;
+
+.news {
+  height: rem(600);
+  background: url("/app/assets/blog_bg.png") center/cover no-repeat;
+  padding: rem(110) rem(210);
+  color: #ffffff;
+
+  .news__header {
+    font-size: rem(30);
+    padding-bottom: rem(50);
+  }
+
+  .news__grid {
+    @include flex(center, center);
+    gap: rem(25);
+
+    .grid__item {
+      @include flex(center, stretch, column);
+      width: rem(355);
+      gap: rem(30);
+
+      .item__title {
+        font-weight: bold;
+        font-size: rem(14);
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -40%;
+          left: 0;
+          width: rem(30);
+          height: rem(1);
+          background-color: rgba(255, 255, 255, 0.75);
+        }
+      }
+
+      .item__desc {
+        font-weight: 600;
+        font-size: rem(14);
+        color: rgba(255, 255, 255, 0.75);
+      }
+    }
+  }
+}

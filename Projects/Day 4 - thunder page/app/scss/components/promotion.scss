@@ -1,0 +1,43 @@
+@use '../util/' as *;
+
+.promotion {
+  @include flex();
+  height: rem(500);
+  padding: 0 rem(210);
+
+  .promotion__img {
+    @include flex(center, center);
+    width: 50%;
+    height: 100%;
+  }
+
+  .promotion__content {
+    @include flex(center, flex-start, column);
+    gap: rem(45);
+    width: 50%;
+
+    .title {
+      font-weight: bold;
+      font-size: rem(40);
+    }
+
+    .desc {
+      font-size: rem(24);
+      color: #767370;
+
+      .semibold {
+        font-weight: 600;
+      }
+    }
+
+    .view {
+      width: rem(150);
+      height: rem(45);
+      background-color: #89ca89;
+      font-weight: bold;
+      font-size: rem(18);
+      color: #ffffff;
+      border-radius: rem(2);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use '../util/' as *;
+
+.callout {
+  @include flex(center, center);
+  height: rem(150);
+  background-color: #79c277;
+  color: #ffffff;
+  font-size: rem(32);
+
+  .underline {
+    text-decoration: underline;
+    margin: 0 rem(10);
+  }
+}

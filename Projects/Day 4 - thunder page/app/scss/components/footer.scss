@@ -1,0 +1,96 @@
+@use '../util/' as *;
+
+.footer {
+  padding: 0 rem(210);
+  background-color: #000000;
+
+  .footer__grid {
+    @include flex(center);
+    gap: rem(20);
+    padding-top: rem(80);
+
+    .grid__item {
+      @include flex(normal, stretch, column);
+      color: #ffffff;
+      height: rem(320);
+      width: rem(240);
+
+      .item__title {
+        font-size: rem(14);
+        font-weight: bold;
+        padding-bottom: rem(25);
+      }
+
+      .item__links {
+        @include flex(normal, flex-start, row);
+        gap: rem(5);
+        font-size: rem(14);
+        color: #aaaaaa;
+        flex-wrap: wrap;
+
+        .link {
+          color: #787878;
+        }
+
+        .cloud {
+          display: inline-block;
+          background-color: #222222;
+          padding: rem(8);
+          border-radius: rem(3);
+          font-size: rem(14);
+          font-weight: bold;
+        }
+
+        .lorem {
+          font-size: rem(14);
+          line-height: 1.6;
+          color: #aaaaaa;
+        }
+      }
+
+      .search {
+        width: 100%;
+        position: relative;
+        margin-top: rem(25);
+
+        &::before {
+          content: "";
+          background: url("/app/assets/search-footer.png") center/cover
+            no-repeat;
+          position: absolute;
+          right: rem(15);
+          top: 50%;
+          transform: translateY(-50%);
+          height: rem(20);
+          width: rem(20);
+        }
+
+        input {
+          width: 100%;
+          height: rem(45);
+          padding: 0 rem(15);
+          border-radius: rem(5);
+
+          &::placeholder {
+            font-size: rem(14);
+            color: #aaaaaa;
+          }
+        }
+      }
+    }
+  }
+
+  .socials {
+    @include flex(space-between, center);
+    padding: rem(30) 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: rem(12);
+    border-top: rem(5) solid #222222;
+
+    .socials__links {
+      @include flex(center, center);
+      gap: rem(20);
+    }
+  }
+}

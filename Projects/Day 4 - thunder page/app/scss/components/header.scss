@@ -1,0 +1,104 @@
+@use '../util/' as *;
+
+.header {
+  color: #ffffff;
+
+  .header__nav {
+    @include flex(space-between, center);
+    height: rem(100);
+    background-color: #000000;
+    padding: 0 rem(210);
+
+    .header__logo {
+      padding: 0 rem(30);
+    }
+
+    .header__menu {
+      @include flex();
+      height: 100%;
+      color: #767676;
+      font-size: rem(13);
+      font-weight: bold;
+
+      a {
+        @include flex(center, center);
+        height: 100%;
+        padding: 0 rem(25);
+      }
+
+      .active {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .header__hero {
+    @include flex(center, flex-start, column);
+    background: url("/app/assets/hero_bg.png") center/cover no-repeat;
+    height: rem(450);
+    padding: 0 rem(210);
+    gap: rem(20);
+    position: relative;
+
+    .header__primary {
+      font-size: rem(34);
+      font-weight: bold;
+      padding: rem(20);
+      background-color: #65c25d;
+      display: inline-block;
+      border-radius: rem(3);
+    }
+
+    .header__secondary {
+      padding: rem(10) rem(15);
+      background-color: #000000;
+      display: inline-block;
+      border-radius: rem(3);
+    }
+
+    .arrows {
+      @include flex(space-between, center);
+      position: absolute;
+      margin: 0 rem(-210);
+      width: 100%;
+      height: 100%;
+
+      .arrow {
+        @include flex(center, center);
+        background-color: rgba(0, 0, 0, 0.9);
+        font-size: rem(50);
+        font-weight: bold;
+        width: rem(60);
+        height: rem(80);
+
+        //I used different font cuz why not xD
+      }
+    }
+  }
+
+  .hero__features {
+    @include flex(center, center);
+    color: #000000;
+    height: rem(500);
+    gap: rem(25);
+
+    .feature {
+      @include flex(normal, center, column);
+      width: rem(315);
+
+      .feature__icon {
+        padding-bottom: rem(45);
+      }
+
+      .feature__name {
+        font-weight: bold;
+        font-size: rem(38);
+        padding-bottom: rem(35);
+      }
+
+      .feature__desc {
+        text-align: center;
+      }
+    }
+  }
+}
