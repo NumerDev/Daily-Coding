@@ -1,0 +1,78 @@
+@use '../util/' as *;
+
+.section__6 {
+  @include flex(center, center);
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url("/app/assets/O.png") left/25% 100% no-repeat;
+  }
+
+  .content {
+    @include flex(center, center, column);
+    height: 100%;
+    width: 60%;
+    text-align: center;
+
+    .title {
+      font-family: $secondary-font;
+      font-size: rem(50);
+      font-weight: 200;
+      padding-bottom: rem(40);
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+
+    .desc {
+      font-size: rem(18);
+      line-height: rem(25);
+      position: relative;
+      padding-bottom: rem(100);
+    }
+
+    .form {
+      @include flex(center, center, column);
+      width: rem(600);
+
+      input {
+        width: rem(275);
+        height: rem(45);
+        border: rem(1) solid black;
+        position: relative;
+        background-color: transparent;
+
+        &::placeholder {
+          color: #000000;
+          opacity: 1;
+        }
+      }
+
+      .form__data {
+        @include flex(center, center);
+        gap: rem(30);
+        padding-bottom: rem(30);
+      }
+
+      .form__text {
+        padding-bottom: rem(30);
+        input {
+          height: rem(130);
+          width: rem(585);
+        }
+      }
+
+      .send {
+        @include flex(center, center);
+        height: rem(45);
+        width: rem(585);
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: $secondary-font;
+      }
+    }
+  }
+}

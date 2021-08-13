@@ -1,0 +1,46 @@
+@use '../util/' as *;
+
+.section__4 {
+  @include flex(space-around, center);
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url("/app/assets/L.png") 8%/20% 100% no-repeat;
+  }
+
+  .content {
+    @include flex(flex-start, flex-start, column);
+    height: 100%;
+    width: 40%;
+    padding-left: rem(180);
+    padding-top: rem(210);
+
+    .title {
+      font-family: $secondary-font;
+      font-size: rem(50);
+      font-weight: 200;
+      padding-bottom: rem(40);
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+
+    .desc {
+      font-size: rem(18);
+      line-height: rem(25);
+      width: rem(350);
+      position: relative;
+
+      &::before {
+        content: "";
+        height: rem(80);
+        width: rem(1.5);
+        background-color: #000000;
+        position: absolute;
+        bottom: -100%;
+      }
+    }
+  }
+}

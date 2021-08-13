@@ -1,0 +1,68 @@
+@use '../util/' as *;
+
+.section__2 {
+  @include flex(center, center);
+  background: url("/app/assets/section_2_item.png") 5% / 35% no-repeat;
+
+  &::before {
+    content: "";
+    background: url("/app/assets/P.png") 8%/20% 100% no-repeat;
+  }
+
+  .content {
+    padding: 0 rem(400) 0 40%;
+
+    .title {
+      padding-left: rem(120);
+      font-size: rem(50);
+      font-family: $secondary-font;
+      font-weight: 200;
+      position: relative;
+      margin-bottom: rem(50);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: rem(80);
+        height: rem(1);
+        background-color: #000000;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+
+    .desc {
+      p {
+        font-size: rem(18);
+        line-height: rem(30);
+        text-align: left;
+        padding-bottom: rem(20);
+      }
+    }
+
+    .socials {
+      @include flex();
+      width: rem(200);
+
+      .item {
+        @include flex(center, center);
+        height: rem(35);
+        width: rem(35);
+        background-color: $bg-social;
+        margin-top: rem(80);
+
+        &:not(:last-child) {
+          margin-right: rem(20);
+        }
+      }
+
+      .active {
+        background-color: #000000;
+      }
+    }
+  }
+}
