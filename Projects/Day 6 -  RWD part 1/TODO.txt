@@ -1,0 +1,42 @@
+
+
+
+1. Responsive vs Adaptive design
+    - differences [done]
+
+2. The fluid layout
+    - flex and grid [done]
+    - components
+    - fonts
+    - images
+
+3. Relative units
+    - em/rem [done]
+    - % [done]
+    - vh vw [done]
+    - ch // i want to check this
+
+4. Breakpoints and media queries
+    - logical operators
+        - and [done]
+        - not 
+        - only (only if entire query matches) [done]
+        - , (works like 'or')
+    - media types
+        - all (default when no other type is specified) [done]
+        - print [maybe later]
+        - screen [done]
+        - speech (speech synthesizers) [not today]
+    - media features
+        - in MQ lv 4 you can write like this: @media (width <= 30em) or 
+          @media (30em <= width <= 50em) [in progress]
+
+
+    - orientation and aspect ratio
+    - min max values [done]
+    - common breakpoints 
+
+5. Mobile/Desktop first
+
+
+# ------------------------------------------------- #

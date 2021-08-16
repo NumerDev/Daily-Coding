@@ -1,0 +1,55 @@
+@use '../util/' as *;
+
+.section__one {
+  @include flex(space-around, flex-start);
+  padding: rem(30) 0;
+  text-align: center;
+  font-size: rem(20);
+  color: white;
+  width: rem(500);
+  height: rem(400);
+  background-color: rgba(220, 20, 60, 0.637);
+  //   transition: all 0.3s ease;
+
+  .box {
+    @include flex(center, center);
+    flex-basis: 30%;
+    width: rem(50);
+    height: rem(50);
+    background-color: rebeccapurple;
+  }
+}
+
+// @media only screen and (max-width: rem(900)) {
+//   .section__one {
+//     width: rem(300);
+//     flex-wrap: wrap;
+//     background-color: sandybrown;
+
+//     .box {
+//       flex-basis: 40%;
+
+//       font-size: rem(16);
+//     }
+//   }
+// }
+
+// @media only screen and (max-height: rem(600)) and (max-width: rem(600)) {
+//   .section__one {
+//     width: rem(200);
+//     flex-wrap: wrap;
+//     background-color: royalblue;
+
+//     .box {
+//       flex-basis: 60%;
+
+//       font-size: rem(10);
+//     }
+//   }
+// }
+
+// @media only screen and (display-mode: fullscreen) {
+//   body {
+//     background-color: #1c1c1c;
+//   }
+// }
