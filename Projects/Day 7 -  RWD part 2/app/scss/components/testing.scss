@@ -1,0 +1,104 @@
+@use '../util/' as *;
+
+.wrapper {
+  @include flex(flex-start, center, column);
+  gap: rem(40);
+  height: 100vh;
+  background-color: #f0eddf;
+  padding: rem(35);
+  transition: all 0.3s ease;
+
+  .box {
+    min-width: rem(344);
+    min-height: rem(227);
+    max-width: 60%;
+    max-height: 25vh;
+    background-color: #ece0a8;
+    box-shadow: rem(5) rem(5) rem(10) rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+
+    .title {
+      @include flex(center, center);
+      width: 100%;
+      font-size: rem(22);
+      font-weight: bold;
+      color: #c6aa2a;
+      padding-top: rem(20);
+    }
+
+    .content {
+      font-size: rem(18);
+      text-align: center;
+      padding: rem(20) rem(60) 0;
+      color: #705d06;
+    }
+  }
+}
+
+// media for tablets
+
+@media only screen and (min-width: rem(834)) and (max-width: rem(1440)) {
+  .wrapper {
+    background-color: #bae4e7;
+
+    .box {
+      min-width: rem(550);
+      min-height: rem(300);
+      max-width: rem(550);
+      max-height: rem(300);
+      background-color: #35b3bc;
+
+      .title {
+        color: #0b464a;
+        font-size: rem(30);
+        padding-top: rem(33);
+      }
+
+      .content {
+        color: #0c4f54;
+        font-size: rem(28);
+        padding-top: rem(33);
+      }
+    }
+  }
+}
+
+// media for desktop (1440^)
+
+@media only screen and (min-width: rem(1440)) {
+  .wrapper {
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+    padding: rem(110);
+    background-color: #e1b785;
+    // gap: rem(120) rem(120);
+    // column-gap: rem(120);
+
+    .box {
+      @include flex(space-between, stretch, column);
+      min-width: rem(550);
+      min-height: rem(300);
+      max-width: rem(550);
+      max-height: rem(300);
+      background-color: #cc9a5d;
+      padding: rem(30);
+      flex-basis: rem(550);
+
+      .title {
+        @include flex(flex-start, center);
+        color: #ffffff;
+        font-size: rem(36);
+        padding: 0;
+      }
+
+      .content {
+        @include flex(flex-end, center);
+        text-align: right;
+        color: #714410;
+        font-size: rem(28);
+        padding-left: rem(130);
+        padding-right: 0;
+      }
+    }
+  }
+}
