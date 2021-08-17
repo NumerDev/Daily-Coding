@@ -1,29 +1,29 @@
-<h1 align="center">Day 6 - RWD part 1</h1>
+<h1 align="center">Day 7 - RWD part 2</h1>
 
-Today was a busy day, so I made today's coding a little lighter so I don't strain myself and lose motivation. I started with a little research on
-RWD fundamentals and did some small experiments. Tomorrow I want to desing simple layout and test it carefully with media queries and 
-responsive elements like fonts or images.
+Today came the moment when I pretended to be a designer again, this time fortunately with something very simple just to test media queries. 
+I began with a bit of an 'adaptive' approach just to try if I would break anything along the way like I did a long time ago. Now I want to change this design so that it will adapt with fonts to any type of screen (***at least to these three major ones***).
 
 <hr>
 
-<img width="300" src="https://c.tenor.com/0TVrPKWfzVMAAAAC/bunny-rabbit.gif" align="right" />
+<img width="250" src="https://c.tenor.com/wVAsaDiJgusAAAAC/oh-crap-leave.gif" align="right" />
 
 
 **Stack**:
 - HTML
 - CSS (SCSS)
 - Gulp
-- Google (mostly)
+- Google (70% of the time)
 
-**Media queries**: Not exactly but **YES!** FINALLY!
+**Media queries**: yep...
 
 **Speed code video:**
-[[ Here ]](https://www.youtube.com/watch?v=vyMIO0IH2yQ)
+[[ Here ]](https://www.youtube.com/watch?v=o1BjIecN2c4)
 
 **What could have been done better?:**
-- Whole day...  I'm so tired x.x
+- I should set the min and max values of `width` and `height` prevent scaling of elements
+- I need to check how flex wrap spacing works
 
-**Wasted cups of coffee**: 0 
+**Wasted cups of coffee**: 1 
 <hr>
 
 ## Instalation
