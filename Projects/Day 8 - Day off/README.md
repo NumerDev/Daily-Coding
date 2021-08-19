@@ -1,4 +1,4 @@
-<h1 align="center">Day 7 - day off</h1>
+<h1 align="center">Day 8 - day off</h1>
 
 I feel like I've been putting too much pressure on myself lately. I haven't found that perfect spot yet but I'm trying. 
 Anyway, in order not to break my regularity instead of writing code today I did some research and focused more on reading 
