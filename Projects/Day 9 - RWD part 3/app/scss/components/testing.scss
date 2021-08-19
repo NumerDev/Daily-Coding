@@ -1,0 +1,79 @@
+@use '../util/' as *;
+
+.wrapper {
+  @include flex(flex-start, center, column);
+  gap: rem(40);
+  height: 100vh;
+  background-color: #f0eddf;
+  padding: rem(35);
+  transition: all 0.3s ease;
+
+  .box {
+    @include flex(center, center);
+    min-width: rem(344);
+    min-height: rem(227);
+    max-width: 60%;
+    max-height: 25vh;
+    background-color: #ece0a8;
+    box-shadow: rem(5) rem(5) rem(10) rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    padding: rem(10);
+
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+    }
+  }
+}
+
+// media for tablets
+
+@media only screen and (min-width: rem(834)) and (max-width: rem(1440)) {
+  .wrapper {
+    background-color: #bae4e7;
+
+    .box {
+      min-width: rem(550);
+      min-height: rem(300);
+      max-width: 50%;
+      max-height: rem(300);
+      background-color: #35b3bc;
+      padding: rem(10);
+
+      img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// media for desktop (1440^)
+
+@media only screen and (min-width: rem(1440)) {
+  .wrapper {
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+    padding: rem(110);
+    background-color: #e1b785;
+
+    .box {
+      @include flex(space-between, stretch, column);
+      min-width: rem(550);
+      min-height: rem(300);
+      max-width: rem(550);
+      max-height: rem(300);
+      background-color: #cc9a5d;
+      padding: rem(10);
+      flex-basis: rem(550);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
